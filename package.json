@@ -1,0 +1,23 @@
+{
+  "name": "parcel-vue",
+  "version": "1.0.0",
+  "description": "Parcel构建Vue单页",
+  "author": "",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "parcel index.html -p 8030 --open",
+    "build": "parcel build index.html --public-url ./ --no-source-maps --no-cache"
+  },
+  "dependencies": {
+    "vue-hot-reload-api": "^2.3.1",
+    "vue-router": "^3.0.2"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.5.1",
+    "parcel-bundler": "^1.11.0",
+    "vue": "^2.5.22",
+    "vue-template-compiler": "^2.5.22"
+  }
+}
