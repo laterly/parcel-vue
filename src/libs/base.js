@@ -1,5 +1,6 @@
 /*公共base.js */
 import Vue from 'vue'
+import './style'
 console.log('公共jszzz');
 //一些工具
 window.vUtils = {

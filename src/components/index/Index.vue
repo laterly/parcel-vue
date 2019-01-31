@@ -24,6 +24,8 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="stylus" scoped>
+  .index
+    background-color: red;
   
 </style>
