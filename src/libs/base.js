@@ -2,13 +2,34 @@
 import Vue from 'vue'
 import './style'
 import './remConfig'
-console.log('公共jszzz');
+import {
+    Indicator,
+    Toast
+} from 'mint-ui';
 //一些工具
 window.vUtils = {
-    loading:()=>{
-
+    loading: (text) => {
+        Indicator.open({
+            text: text || '请稍后...',
+            spinnerType: 'snake'
+        });
+        return Indicator;
     },
-    msg:(text)=>{
-        console.log(text);
+    toast: {
+        msg: (text) => {
+            Toast(text);
+        },
+        success: (text) => {
+            Toast({
+                message: text || '操作成功',
+                iconClass: 'icon icon-success'
+            });
+        },
+        fail: (text) => {
+            Toast({
+                message: text || '失败',
+                iconClass: 'icon icon-fail'
+            });
+        }
     }
 }
