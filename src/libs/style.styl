@@ -1,3 +1,828 @@
 /*公共css*/
-.index
-    background-color:blue!important
+/*重置浏览器固有的css*/
+$textMainColor='#333';
+$mainBodyColor="rgb(242, 242, 242)";
+$inputPriColor='#999'
+$inputAfterColor="#666"
+$borderMainColor="#f5f5f5"
+body,
+html {
+    font-size: 0.26rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "黑体", "宋体", Arial, sans-serif;
+    color: $textMainColor;
+    -webkit-text-size-adjust: none;
+    padding: 0;
+    margin: 0;
+    background-color: $mainBodyColor;
+}
+
+article,
+aside,
+body,
+dd,
+dialog,
+div,
+dl,
+dt,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+input,
+li,
+nav,
+ol,
+p,
+section,
+textarea,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li,
+ol,
+ul {
+    list-style-type: none
+}
+em{
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color:$textMainColor;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+textarea {
+    resize: none;
+    outline: 0
+}
+
+input,
+button,
+textarea {
+    outline: 0;
+    border: 0;
+}
+
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+/* 禁止长按链接与图片弹出菜单 */
+
+a,
+img {
+    -webkit-touch-callout: none;
+}
+/*去掉手持设备点击时出现的透明层*/
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+/* 搜索栏输入文字颜色*/
+input{
+  background-color:$inputPriColor;
+  color:$inputAfterColor;
+}
+
+/**/
+
+/*重置浏览器固有的css结束*/
+
+/*flex布局专用*/
+
+.flex {
+    display: flex;
+}
+
+.flex1 {
+    flex: 1
+}
+
+.flex2 {
+    flex: 2
+}
+
+.flex3 {
+    flex: 3
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*flex部分结束*/
+
+/*左右对其部分*/
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/*左右对其部分结束*/
+
+/*字体加粗*/
+
+.font-weight {
+    font-weight: bold;
+}
+
+/*字体加粗结束*/
+
+/*display部分*/
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block !important;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/*display部分结束*/
+/*图片自适应*/
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+/*宽高区域*/
+
+.height-percent-100 {
+    height: 100%;
+}
+
+.width-percent-100 {
+    width: 100%;
+}
+
+.height-vh-100 {
+    height: 100vh;
+}
+
+/*宽高区域结束*/
+
+/*浮动*/
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+/*浮动结束*/
+
+/*清除浮动*/
+
+.clearfix {
+    *zoom: 1;
+    clear: both;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    content: " ";
+    visibility: hidden;
+    clear: both;
+}
+
+/*清除浮动结束*/
+
+/*绝对定位*/
+
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute
+}
+
+.fix {
+    position: fixed;
+}
+
+/*绝对定位结束*/
+
+/*文字超出隐藏*/
+
+.text-elli {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*文字超出隐藏结束*/
+
+/*超出样式*/
+
+.over-hidden {
+    overflow: hidden;
+}
+
+.over-scroll {
+    overflow: scroll;
+}
+
+.over-auto {
+    overflow: auto;
+}
+
+/*超出样式结束*/
+
+/*常用颜色*/
+
+/*背景颜色*/
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+/*字体颜色*/
+
+.color-white {
+    color: white;
+}
+
+.color-black {
+    color: black;
+}
+
+/*常用颜色结束*/
+
+/*常用字体大小*/
+
+.font16 {
+    font-size: .16rem;
+}
+
+.font20 {
+    font-size: .2rem;
+}
+
+.font21 {
+    font-size: .21rem;
+}
+
+.font22 {
+    font-size: .22rem;
+}
+
+.font24 {
+    font-size: .24rem;
+}
+
+.font26 {
+    font-size: .26rem;
+}
+
+.font28 {
+    font-size: .28rem;
+}
+
+.font30 {
+    font-size: .3rem;
+}
+
+.font32 {
+    font-size: .32rem;
+}
+
+.font34 {
+    font-size: .34rem;
+}
+
+.font36 {
+    font-size: .36rem;
+}
+/*常用border*/
+.border-all1{
+    border: 1px $borderMainColor solid;
+}
+.border-left1{
+    border-left: 1px $borderMainColor solid;
+}
+.border-right1 {
+    border-right: 1px $borderMainColor solid;
+}
+.border-top1 {
+    border-top: 1px $borderMainColor solid;
+}
+.border-bottom1 {
+    border-bottom: 1px $borderMainColor solid;
+}
+/*常用字体大小结束*/
+
+/*常用margin距离*/
+
+.m10 {
+    margin: .1rem;
+}
+
+.m12 {
+    margin: .12rem;
+}
+
+.m14 {
+    margin: .14rem;
+}
+
+.m20 {
+    margin: .2rem;
+}
+
+.m26 {
+    margin: .26rem;
+}
+
+.m30 {
+    margin: .30rem;
+}
+
+.m34 {
+    margin: .34rem;
+}
+
+.m40 {
+    margin: .4rem;
+}
+
+.m46 {
+    margin: .46rem;
+}
+
+/*margin-left*/
+
+.ml10 {
+    margin-left: .1rem;
+}
+
+.ml12 {
+    margin-left: .12rem;
+}
+
+.ml14 {
+    margin-left: .14rem;
+}
+
+.ml20 {
+    margin-left: .2rem;
+}
+
+.ml24 {
+    margin-left: .24rem;
+}
+
+.ml26 {
+    margin-left: .26rem;
+}
+
+.ml30 {
+    margin-left: .30rem;
+}
+
+.ml34 {
+    margin-left: .34rem;
+}
+
+.ml40 {
+    margin-left: .4rem;
+}
+
+.ml46 {
+    margin-left: .46rem;
+}
+
+/*margin-top*/
+
+.mt10 {
+    margin-top: .1rem;
+}
+
+.mt12 {
+    margin-top: .12rem;
+}
+
+.mt14 {
+    margin-top: .14rem;
+}
+.mt16 {
+    margin-top: .16rem;
+}
+.mt20 {
+    margin-top: .2rem;
+}
+
+.mt26 {
+    margin-top: .26rem;
+}
+
+.mt30 {
+    margin-top: .30rem;
+}
+
+.mt34 {
+    margin-top: .34rem;
+}
+
+.mt40 {
+    margin-top: .4rem;
+}
+
+.mt46 {
+    margin-top: .46rem;
+}
+
+/*margin-bottom*/
+
+.mb10 {
+    margin-bottom: .1rem;
+}
+
+.mt12 {
+    margin-bottom: .12rem;
+}
+
+.mt14 {
+    margin-bottom: .14rem;
+}
+
+.mt20 {
+    margin-bottom: .2rem;
+}
+
+.mt26 {
+    margin-bottom: .26rem;
+}
+
+.mt30 {
+    margin-bottom: .30rem;
+}
+
+.mt34 {
+    margin-bottom: .34rem;
+}
+
+.mt40 {
+    margin-bottom: .4rem;
+}
+
+.mt46 {
+    margin-bottom: .46rem;
+}
+
+/*margin-right*/
+
+.mr10 {
+    margin-right: .1rem;
+}
+
+.mr12 {
+    margin-right: .12rem;
+}
+
+.mr14 {
+    margin-right: .14rem;
+}
+
+.mr20 {
+    margin-right: .2rem;
+}
+
+.mr26 {
+    margin-right: .26rem;
+}
+
+.mr30 {
+    margin-right: .30rem;
+}
+
+.mr34 {
+    margin-right: .34rem;
+}
+
+.mr40 {
+    margin-right: .4rem;
+}
+
+.mr46 {
+    margin-right: .46rem;
+}
+
+/*常用margin距离结束*/
+
+/*常用padding距离*/
+
+.pad10 {
+    padding: .1rem;
+}
+
+.pad12 {
+    padding: .12rem;
+}
+
+.pad14 {
+    padding: .14rem;
+}
+
+.pad20 {
+    padding: .2rem;
+}
+
+.pad26 {
+    padding: .26rem;
+}
+
+.pad30 {
+    padding: .30rem;
+}
+
+.pad34 {
+    padding: .34rem;
+}
+
+.pad40 {
+    padding: .4rem;
+}
+
+.pad46 {
+    padding: .46rem;
+}
+
+/*margin-left*/
+
+.padl10 {
+    padding-left: .1rem;
+}
+
+.padl12 {
+    padding-left: .12rem;
+}
+
+.padl14 {
+    padding-left: .14rem;
+}
+
+.padl20 {
+    padding-left: .2rem;
+}
+
+.padl26 {
+    padding-left: .26rem;
+}
+
+.padl30 {
+    padding-left: .30rem;
+}
+
+.padl34 {
+    padding-left: .34rem;
+}
+
+.padl40 {
+    padding-left: .4rem;
+}
+
+.padl46 {
+    padding-left: .46rem;
+}
+
+/*padding-top*/
+
+.padt10 {
+    padding-top: .1rem;
+}
+
+.padt12 {
+    padding-top: .12rem;
+}
+
+.padt14 {
+    padding-top: .14rem;
+}
+
+.padt20 {
+    padding-top: .2rem;
+}
+
+.padt26 {
+    padding-top: .26rem;
+}
+
+.padt30 {
+    padding-top: .30rem;
+}
+
+.padt34 {
+    padding-top: .34rem;
+}
+
+.padt40 {
+    padding-top: .4rem;
+}
+
+.padt46 {
+    padding-top: .46rem;
+}
+
+/*margin-bottom*/
+
+.padb10 {
+    padding-bottom: .1rem;
+}
+
+.padt12 {
+    padding-bottom: .12rem;
+}
+
+.padt14 {
+    padding-bottom: .14rem;
+}
+
+.padt20 {
+    padding-bottom: .2rem;
+}
+
+.padt26 {
+    padding-bottom: .26rem;
+}
+
+.padt30 {
+    padding-bottom: .30rem;
+}
+
+.padt34 {
+    padding-bottom: .34rem;
+}
+
+.padt40 {
+    padding-bottom: .4rem;
+}
+
+.padt46 {
+    padding-bottom: .46rem;
+}
+
+/*padding-right*/
+
+.padr10 {
+    padding-right: .1rem;
+}
+
+.padr12 {
+    padding-right: .12rem;
+}
+
+.padr14 {
+    padding-right: .14rem;
+}
+
+.padr20 {
+    padding-right: .2rem;
+}
+
+.padr26 {
+    padding-right: .26rem;
+}
+
+.padr30 {
+    padding-right: .30rem;
+}
+
+.padr34 {
+    padding-right: .34rem;
+}
+
+.padr40 {
+    padding-right: .4rem;
+}
+
+.padr46 {
+    padding-right: .46rem;
+}
+
+
+
+/*********** screen配置 ***********/
+
+/* media查询，设置htmlfont-size值 */
+
+@media screen and (max-width: 320px) {
+    /*设备宽度在320区间的样式*/
+    html {
+        font-size: 42.666666666667px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    /*设备宽度在321-375区间的样式(iphone6)*/
+    html {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 414px) {
+    /*设备宽度在376-414区间的样式(iphone6+)*/
+    html {
+        font-size: 55.2px;
+    }
+}
+
+@media screen and (min-width: 415px) and (max-width: 480px) {
+    /*设备宽度在415-480区间的样式*/
+    html {
+        font-size: 64px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 540px) {
+    /*设备宽度在481-540区间的样式*/
+    html {
+        font-size: 72px;
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 640px) {
+    /*设备宽度在541-640区间的样式*/
+    html {
+        font-size: 85.3333333333333px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 720px) {
+    /*设备宽度在641-720区间的样式*/
+    html {
+        font-size: 96px;
+    }
+}
+
+@media screen and (min-width: 721px) and (max-width: 750px) {
+    /*设备宽度在721-750区间的样式*/
+    html {
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width: 751px) {
+    /*设备宽度在751以上的样式*/
+    html {
+        font-size: 100px;
+        width: 750px;
+        margin: 0 auto;
+    }
+}

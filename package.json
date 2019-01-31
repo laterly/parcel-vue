@@ -11,12 +11,14 @@
     "build": "parcel build index.html --public-url ./ --no-source-maps --no-cache"
   },
   "dependencies": {
+    "mint-ui": "^2.2.13",
     "stylus": "^0.54.5",
     "vue-hot-reload-api": "^2.3.1",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.5.1",
+    "babel-plugin-component": "^1.1.1",
     "parcel-bundler": "^1.11.0",
     "stylus-loader": "^3.0.2",
     "vue": "^2.5.22",
