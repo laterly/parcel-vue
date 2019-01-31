@@ -17,11 +17,13 @@ export default {
   },
   methods: {
     showConsole() {
-      console.log('hello parcel vue')
+      console.log('hello parcel vue');
+      //调用公共js的方法
+      vUtils.msg('lalalal');
     }
   }
 };
 </script>
 <style scoped>
-
+  
 </style>
